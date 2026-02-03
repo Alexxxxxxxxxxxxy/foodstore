@@ -1,0 +1,28 @@
+/* 引入特殊font类型 */
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&display=swap');
+@import "tailwindcss";
+
+*{
+    box-sizing: border-box;
+    font-family:"ZCOOL KuaiLe", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #fcfcfc;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+hr{
+    border:none;
+    height: 1px;
+    background-color: #a9a9a9;
+}
+
+.active{
+    border-bottom: 2px solid black;
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --animate-fadein: fadein 1s ease-in-out 1 forwards;
+  @keyframes fadein {
+    0%{
+      opacity: 0;
+    },
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+*{
+  /* margin:0; */
+  box-sizing: border-box;
+  list-style: none;
+  /* 设置字体 */
+  font-family:"ZCOOL KuaiLe";
+  scroll-behavior: smooth;
+}
+
+body{
+  height: 100vh;
+
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.active{
+  padding-bottom: 2px;
+  border-bottom: 2px solid black;
+}
+
+/* scrollbar隐藏 */
+.scrollbar-none::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
