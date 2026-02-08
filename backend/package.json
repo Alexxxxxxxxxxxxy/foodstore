@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon --watch backend  --ext ts --exec ts-node index.ts",
+    "dev":"npx ts-node index.ts",
     "start": "npx ts-node index.ts"
   },
   "devDependencies": {
@@ -19,7 +19,6 @@
     "@types/multer": "^2.0.0",
     "@types/node": "^25.1.0",
     "@types/validator": "^13.15.10",
-    "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
