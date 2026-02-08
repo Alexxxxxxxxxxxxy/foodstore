@@ -1,3 +1,4 @@
+# backend/Dockerfile
 FROM node:18-alpine
 
 WORKDIR /app
@@ -6,17 +7,16 @@ WORKDIR /app
 COPY package*.json ./
 
 # 安装依赖
-RUN npm install
+RUN npm ci --only=production  # 只安装生产依赖，更快更安全
 
-# 复制源代码
-COPY . .
+# 复制编译后的代码
+COPY dist/ ./dist/
 
-# 创建非 root 用户并切换
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nodejs -u 1001
-RUN chown -R nodejs:nodejs /app
-USER nodejs
+# 如果需要，复制其他必要文件
+# COPY .env ./
+# COPY uploads/ ./uploads/
 
 EXPOSE 8000
 
-CMD ["npx", "ts-node", "index.ts"]
+# 启动应用
+CMD ["node", "dist/index.js"]
