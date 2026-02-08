@@ -5,7 +5,7 @@ services:
     image: mongo
     
   backend:
-    build: ~/app/backend
+    build: ./backend
     container_name: backend
     ports:
       - "8000:8000"
