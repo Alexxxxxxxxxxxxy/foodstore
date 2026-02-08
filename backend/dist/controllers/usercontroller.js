@@ -1,4 +1,4 @@
-import { connectToDb, getDb } from "../models/usermodel.ts";
+import { connectToDb, getDb } from "../models/usermodel.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import validator from "validator";

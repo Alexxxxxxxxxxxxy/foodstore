@@ -1,10 +1,10 @@
 import express from "express";
 import cors from "cors";
-import foodRouter from "./routes/foodrouter.ts";
-import userRouter from "./routes/userrouter.ts";
+import foodRouter from "./routes/foodrouter.js";
+import userRouter from "./routes/userrouter.js";
 import "dotenv/config";
-import cartRouter from "./routes/cartrouter.ts";
-import orderRouter from "./routes/orderrouter.ts";
+import cartRouter from "./routes/cartrouter.js";
+import orderRouter from "./routes/orderrouter.js";
 const app = express();
 // 全局中间件设置
 app.use(express.json()); //json格式文件支持

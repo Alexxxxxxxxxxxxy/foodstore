@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb";
-import { connectToDb, getDb } from "../models/foodmodel.ts";
+import { connectToDb, getDb } from "../models/foodmodel.js";
 import fs from 'fs';
 //连接数据库
 let db;

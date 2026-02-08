@@ -1,6 +1,6 @@
 import express, {} from "express";
-import alipaySdk from "../config/alipay.ts";
-import { connectToDb, getDb } from "../models/foodmodel.ts";
+import alipaySdk from "../config/alipay.js";
+import { connectToDb, getDb } from "../models/foodmodel.js";
 let db;
 connectToDb((err) => {
     if (!err)

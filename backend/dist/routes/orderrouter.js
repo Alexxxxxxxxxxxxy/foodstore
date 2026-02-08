@@ -1,6 +1,6 @@
 import express from "express";
-import { closeOrder, createOrder, getAllOrder, getOrder, notifyUrl, queryFund, queryOrder, refund, updateOrder } from "../controllers/ordercontroller.ts";
-import authMiddleWare from "../middleware/auth.ts";
+import { closeOrder, createOrder, getAllOrder, getOrder, notifyUrl, queryFund, queryOrder, refund, updateOrder } from "../controllers/ordercontroller.js";
+import authMiddleWare from "../middleware/auth.js";
 const orderRouter = express.Router();
 orderRouter.get("/list", getAllOrder);
 orderRouter.post("/list", authMiddleWare, getOrder);

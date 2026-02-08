@@ -1,4 +1,4 @@
-import { connectToDb, getDb } from "../models/cartmodel.ts";
+import { connectToDb, getDb } from "../models/cartmodel.js";
 let db;
 connectToDb((err) => {
     if (!err)

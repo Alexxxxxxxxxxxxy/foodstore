@@ -1,5 +1,5 @@
 import express from 'express';
-import { addFood, foodList, removeFood } from '../controllers/foodcontroller.ts';
+import { addFood, foodList, removeFood } from '../controllers/foodcontroller.js';
 import multer from 'multer';
 const foodRouter = express.Router();
 // 图片存储
