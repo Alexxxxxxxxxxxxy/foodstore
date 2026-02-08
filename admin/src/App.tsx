@@ -7,7 +7,9 @@ import Order from "./pages/Order"
 
 const App = () => {
 
-  const url = "http://localhost:8000"
+  const url = window.location.hostname === 'localhost' 
+    ? 'http://localhost:8000' 
+    : '/api';
 
   const router = createBrowserRouter(
     createRoutesFromElements(

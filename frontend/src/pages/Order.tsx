@@ -6,7 +6,9 @@ import { toast } from "react-toastify"
 export type FoodWithQuantity = Food & {quantity:number}
 
 const Order = () => {
-    const url = "http://localhost:8000"
+    const url = window.location.hostname === 'localhost' 
+    ? 'http://localhost:8000' 
+    : '/api';
     const context = useContext(StoreContext)
     if(!context){
         throw new Error("Order must be used within StoreContextProvider")

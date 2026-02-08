@@ -43,7 +43,9 @@ interface StoreContextType {
 export const StoreContext = createContext<StoreContextType|null>(null)
 
 const StoreContextProvider = (props:any)=>{
-    const url = "http://localhost:8000"
+    const url = window.location.hostname === 'localhost' 
+    ? 'http://localhost:8000' 
+    : '/api';
     const [token,setToken] = useState("")
     
     // 从数据库获取数据

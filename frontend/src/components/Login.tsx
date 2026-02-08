@@ -5,7 +5,9 @@ import { toast } from "react-toastify"
 
 
 const Login = () => {
-  const url = "http://localhost:8000"
+  const url = window.location.hostname === 'localhost' 
+    ? 'http://localhost:8000' 
+    : '/api';
 
   const [state,setState] = useState("Login")
   const context = useContext(StoreContext)
