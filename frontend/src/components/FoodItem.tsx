@@ -2,13 +2,12 @@ import { useContext } from 'react'
 import assets from '../assets/asset.ts'
 import { StoreContext } from '../context/StoreContext.tsx';
 
-const FoodItem = ({_id,name,image,price,description,category}:{
+const FoodItem = ({_id,name,image,price,description}:{
   _id:string;
   name:string;
   image:string;
   price:number;
   description:string;
-  category:string;
 }) => {
 
   const context = useContext(StoreContext);

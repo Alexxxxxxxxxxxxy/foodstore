@@ -19,7 +19,7 @@ const FoodDisplay = ({category}:{category:string}) => {
                 if(category==="All" || category===item.category){
                     return (
                         <div key={index}>
-                            <FoodItem key={index} _id={item._id} name={item.name} image={item.image} price={item.price} description={item.description} category={item.category}/>
+                            <FoodItem key={index} _id={item._id} name={item.name} image={item.image} price={item.price} description={item.description}/>
                         </div>
                     )
                 }
