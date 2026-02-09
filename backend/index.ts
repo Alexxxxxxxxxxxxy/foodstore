@@ -20,6 +20,9 @@ app.use("/api/cart",cartRouter)
 app.use("/images",express.static("uploads"))
 app.use("/ali",orderRouter)
 
-app.listen(8000,'0.0.0.0',()=>{
-    console.log("running at port 8000")
+const PORT = Number(process.env.PORT) || 8000
+const HOST = process.env.HOST || '0.0.0.0'
+
+app.listen(PORT,HOST,()=>{
+    console.log(`running at http://${HOST}:${PORT}`)
 })

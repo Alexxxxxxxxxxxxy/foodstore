@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev":"npx ts-node index.ts",
-    "start": "npx ts-node index.ts"
+    "start": "npx ts-node index.ts",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
