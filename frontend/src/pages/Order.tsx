@@ -6,7 +6,7 @@ import { toast } from "react-toastify"
 export type FoodWithQuantity = Food & {quantity:number}
 
 const Order = () => {
-    const url = window.location.hostname === 'localhost' 
+    const url = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:8000' 
     : '/api';
     const context = useContext(StoreContext)

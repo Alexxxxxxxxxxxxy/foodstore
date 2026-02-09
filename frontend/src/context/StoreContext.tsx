@@ -43,7 +43,7 @@ interface StoreContextType {
 export const StoreContext = createContext<StoreContextType|null>(null)
 
 const StoreContextProvider = (props:any)=>{
-    const url = window.location.hostname === 'localhost' 
+    const url = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:8000' 
     : '/api';
     const [token,setToken] = useState("")
