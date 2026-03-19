@@ -6,9 +6,7 @@ import { toast } from "react-toastify"
 export type FoodWithQuantity = Food & {quantity:number}
 
 const Order = () => {
-    const url = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? 'http://localhost:8000' 
-    : '/api';
+    const url = import.meta.env.VITE_API_URL
     const context = useContext(StoreContext)
     if(!context){
         throw new Error("Order must be used within StoreContextProvider")

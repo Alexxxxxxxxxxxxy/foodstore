@@ -43,9 +43,7 @@ interface StoreContextType {
 export const StoreContext = createContext<StoreContextType|null>(null)
 
 const StoreContextProvider = (props:any)=>{
-    const url = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? 'http://localhost:8000' 
-    : '/api';
+    const url = import.meta.env.VITE_API_URL
     const [token,setToken] = useState("")
     
     // 从数据库获取数据
